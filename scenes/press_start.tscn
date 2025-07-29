@@ -1,0 +1,179 @@
+[gd_scene load_steps=13 format=3 uid="uid://lwf5widdihmj"]
+
+[ext_resource type="Texture2D" uid="uid://3alwm13wfcct" path="res://assets/Backgrounds/Background_Asset2.PNG" id="1_8yjgs"]
+[ext_resource type="Script" path="res://scenes/press_start.gd" id="1_py4og"]
+[ext_resource type="Texture2D" uid="uid://bs77ce7buldif" path="res://assets/Panels/BigSquare_Panel.PNG" id="2_4qp0w"]
+[ext_resource type="Texture2D" uid="uid://vbav1nmjp7v5" path="res://assets/Title_Asset.PNG" id="3_w5x1n"]
+[ext_resource type="Texture2D" uid="uid://dofcvcix0xjpg" path="res://assets/Buttons-Pop-up/UnclickedBack_Button.PNG" id="4_76bkl"]
+[ext_resource type="Texture2D" uid="uid://byxi1073tyol3" path="res://assets/Buttons-Pop-up/ClickedBack_Button.PNG" id="5_pg07q"]
+[ext_resource type="Texture2D" uid="uid://bdb82020guhlq" path="res://assets/Buttons-Pop-up/UnclickedLong_Button.PNG" id="6_g7xgq"]
+[ext_resource type="Texture2D" uid="uid://beyo6spvk5nn0" path="res://assets/Buttons-Pop-up/ClickedLong_Button.PNG" id="7_a0dst"]
+[ext_resource type="FontFile" uid="uid://5kanbd1bjglj" path="res://Ranyth_upperlower.ttf" id="9_txmkf"]
+[ext_resource type="AudioStream" uid="uid://dy2w5pdwni7qs" path="res://assets/audio/click3-VEED (1).mp3" id="10_1060x"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_26sbf"]
+texture = ExtResource("1_8yjgs")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gu8n5"]
+texture = ExtResource("2_4qp0w")
+
+[node name="PressStart" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_py4og")
+
+[node name="Background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_26sbf")
+
+[node name="Panel" type="Panel" parent="Background"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -452.5
+offset_top = -508.0
+offset_right = 452.5
+offset_bottom = 508.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_gu8n5")
+
+[node name="Title" type="TextureRect" parent="Background/Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -282.5
+offset_top = 55.0
+offset_right = 282.5
+offset_bottom = 361.0
+grow_horizontal = 2
+texture = ExtResource("3_w5x1n")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="BackBtn" type="TextureButton" parent="Background/Panel"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -507.5
+offset_top = -194.0
+offset_right = -283.5
+offset_bottom = 30.0
+grow_vertical = 0
+texture_normal = ExtResource("4_76bkl")
+texture_pressed = ExtResource("5_pg07q")
+
+[node name="TrashRookieBtn" type="TextureButton" parent="Background/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -226.0
+offset_top = -168.0
+offset_right = 222.0
+offset_bottom = -82.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("6_g7xgq")
+texture_pressed = ExtResource("7_a0dst")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="RulesLbl" type="Label" parent="Background/Panel/TrashRookieBtn"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 17.0
+offset_right = 420.0
+offset_bottom = 96.0
+theme_override_colors/font_color = Color(0.784314, 0.835294, 0.360784, 1)
+theme_override_fonts/font = ExtResource("9_txmkf")
+theme_override_font_sizes/font_size = 60
+text = "TRASH ROOKIE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WarriorBtn" type="TextureButton" parent="Background/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -226.0
+offset_top = -12.5
+offset_right = 222.0
+offset_bottom = 66.5
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("6_g7xgq")
+texture_pressed = ExtResource("7_a0dst")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="RulesLbl" type="Label" parent="Background/Panel/WarriorBtn"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 17.0
+offset_right = 420.0
+offset_bottom = 96.0
+theme_override_colors/font_color = Color(0.784314, 0.835294, 0.360784, 1)
+theme_override_fonts/font = ExtResource("9_txmkf")
+theme_override_font_sizes/font_size = 55
+text = "WASTE WARRIOR"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GuruBtn" type="TextureButton" parent="Background/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -226.0
+offset_top = 137.0
+offset_right = 222.0
+offset_bottom = 216.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("6_g7xgq")
+texture_pressed = ExtResource("7_a0dst")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="RulesLbl" type="Label" parent="Background/Panel/GuruBtn"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 17.0
+offset_right = 420.0
+offset_bottom = 96.0
+theme_override_colors/font_color = Color(0.784314, 0.835294, 0.360784, 1)
+theme_override_fonts/font = ExtResource("9_txmkf")
+theme_override_font_sizes/font_size = 60
+text = "GARBAGE GURU"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ClickSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_1060x")
+
+[connection signal="pressed" from="Background/Panel/BackBtn" to="." method="_on_back_btn_pressed"]
+[connection signal="pressed" from="Background/Panel/TrashRookieBtn" to="." method="_on_trash_rookie_btn_pressed"]
+[connection signal="pressed" from="Background/Panel/WarriorBtn" to="." method="_on_texture_button_2_pressed"]
+[connection signal="pressed" from="Background/Panel/GuruBtn" to="." method="_on_texture_button_3_pressed"]

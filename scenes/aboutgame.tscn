@@ -1,0 +1,1286 @@
+[gd_scene load_steps=26 format=3 uid="uid://b4l00nn1my8ox"]
+
+[ext_resource type="Script" path="res://scenes/aboutgame.gd" id="1_6vbga"]
+[ext_resource type="Texture2D" uid="uid://3alwm13wfcct" path="res://assets/Backgrounds/Background_Asset2.PNG" id="1_ctqp3"]
+[ext_resource type="Texture2D" uid="uid://dofcvcix0xjpg" path="res://assets/Buttons-Pop-up/UnclickedBack_Button.PNG" id="2_q808y"]
+[ext_resource type="Texture2D" uid="uid://byxi1073tyol3" path="res://assets/Buttons-Pop-up/ClickedBack_Button.PNG" id="3_4ng5l"]
+[ext_resource type="Texture2D" uid="uid://bdb82020guhlq" path="res://assets/Buttons-Pop-up/UnclickedLong_Button.PNG" id="4_mnm74"]
+[ext_resource type="Texture2D" uid="uid://beyo6spvk5nn0" path="res://assets/Buttons-Pop-up/ClickedLong_Button.PNG" id="5_13v7r"]
+[ext_resource type="FontFile" uid="uid://5kanbd1bjglj" path="res://Ranyth_upperlower.ttf" id="6_1xism"]
+[ext_resource type="Texture2D" uid="uid://bs77ce7buldif" path="res://assets/Panels/BigSquare_Panel.PNG" id="7_ekhji"]
+[ext_resource type="Texture2D" uid="uid://vbav1nmjp7v5" path="res://assets/Title_Asset.PNG" id="9_ktqp5"]
+[ext_resource type="Texture2D" uid="uid://bikw8ol8vgfkl" path="res://assets/Props-Objects/Recyclable_Bin.PNG" id="10_o7hg1"]
+[ext_resource type="Texture2D" uid="uid://dq7w3ydniulc8" path="res://assets/Props-Objects/Residual_Bin.PNG" id="11_8kgje"]
+[ext_resource type="Texture2D" uid="uid://c87nvripx1ldl" path="res://assets/Props-Objects/Hazardous_Bin.PNG" id="12_qo1q6"]
+[ext_resource type="Texture2D" uid="uid://b007pj0r1p24d" path="res://assets/Props-Objects/bin.png" id="13_fhqpf"]
+[ext_resource type="Texture2D" uid="uid://bl0jw8fiy55i2" path="res://assets/Props-Objects/bin (2).png" id="14_gwyw2"]
+[ext_resource type="Texture2D" uid="uid://m1ai01ap3rdx" path="res://assets/Props-Objects/bin (3).png" id="15_doms6"]
+[ext_resource type="Texture2D" uid="uid://d1latu1b8x11y" path="res://assets/Props-Objects/bar.png" id="16_ht84i"]
+[ext_resource type="Texture2D" uid="uid://l4ill8nnc58i" path="res://assets/Props-Objects/control1.png" id="17_ppjxb"]
+[ext_resource type="Texture2D" uid="uid://6onm17vcwo23" path="res://assets/Props-Objects/control2.png" id="18_gs3rl"]
+[ext_resource type="Texture2D" uid="uid://dqccgyvli2vtu" path="res://assets/Props-Objects/recycable.png" id="19_vi005"]
+[ext_resource type="Texture2D" uid="uid://5pxemqbujv6v" path="res://assets/Props-Objects/residual.png" id="20_1gisk"]
+[ext_resource type="Texture2D" uid="uid://gmwqr4vx0b4g" path="res://assets/Props-Objects/line.png" id="21_pfka1"]
+[ext_resource type="Texture2D" uid="uid://d3lclhnqwrt07" path="res://assets/Props-Objects/hazardous.png" id="22_jhhj7"]
+[ext_resource type="AudioStream" uid="uid://dy2w5pdwni7qs" path="res://assets/audio/click3-VEED (1).mp3" id="23_4agcg"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qpjxb"]
+texture = ExtResource("1_ctqp3")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iohbd"]
+texture = ExtResource("7_ekhji")
+
+[node name="AboutGame" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6vbga")
+
+[node name="Background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_qpjxb")
+
+[node name="BackBtn" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -228.0
+offset_right = 224.0
+offset_bottom = -4.0
+grow_vertical = 0
+texture_normal = ExtResource("2_q808y")
+texture_pressed = ExtResource("3_4ng5l")
+
+[node name="MechanicsBtn" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -802.0
+offset_top = -440.0
+offset_right = -354.0
+offset_bottom = -361.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("4_mnm74")
+texture_pressed = ExtResource("5_13v7r")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="MechanicsLbl" type="Label" parent="MechanicsBtn"]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 15.0
+offset_right = 403.0
+offset_bottom = 94.0
+theme_override_colors/font_color = Color(0.784314, 0.835294, 0.360784, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 70
+text = "MECHANICS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ControlBtn" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -802.0
+offset_top = -290.0
+offset_right = -354.0
+offset_bottom = -211.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("4_mnm74")
+texture_pressed = ExtResource("5_13v7r")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="ControlLbl" type="Label" parent="ControlBtn"]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 16.0
+offset_right = 381.0
+offset_bottom = 95.0
+theme_override_colors/font_color = Color(0.784314, 0.835294, 0.360784, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 70
+text = "CONTROLS"
+horizontal_alignment = 1
+
+[node name="PointsBtn" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -802.0
+offset_top = -140.0
+offset_right = -354.0
+offset_bottom = -61.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("4_mnm74")
+texture_pressed = ExtResource("5_13v7r")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="PointsLbl" type="Label" parent="PointsBtn"]
+layout_mode = 0
+offset_left = 86.0
+offset_top = 17.0
+offset_right = 364.0
+offset_bottom = 96.0
+theme_override_colors/font_color = Color(0.784314, 0.835294, 0.360784, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 70
+text = "POINTS"
+horizontal_alignment = 1
+
+[node name="TrashBtn" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -802.0
+offset_top = 10.0
+offset_right = -354.0
+offset_bottom = 89.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("4_mnm74")
+texture_pressed = ExtResource("5_13v7r")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="TrashLbl" type="Label" parent="TrashBtn"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 17.0
+offset_right = 437.0
+offset_bottom = 96.0
+theme_override_colors/font_color = Color(0.784314, 0.835294, 0.360784, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 70
+text = "TRASH DATA"
+horizontal_alignment = 1
+
+[node name="MechanicsPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 636.0
+offset_top = -40.0
+offset_right = 1953.0
+offset_bottom = 1122.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_iohbd")
+
+[node name="Title" type="TextureRect" parent="MechanicsPanel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -316.0
+offset_top = -40.0
+offset_right = 304.0
+offset_bottom = 329.0
+grow_horizontal = 2
+texture = ExtResource("9_ktqp5")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="MechanicsPanel"]
+layout_mode = 0
+offset_left = 177.0
+offset_top = 218.0
+offset_right = 1119.0
+offset_bottom = 260.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 41
+text = "Goal of the Game:"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="MechanicsPanel"]
+layout_mode = 0
+offset_left = 219.0
+offset_top = 263.0
+offset_right = 1121.0
+offset_bottom = 395.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 41
+text = "To segregate and categorize the different 	types of trash into its appropriate waste type."
+autowrap_mode = 3
+
+[node name="Label3" type="Label" parent="MechanicsPanel"]
+layout_mode = 0
+offset_left = 177.0
+offset_top = 399.0
+offset_right = 1119.0
+offset_bottom = 441.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 41
+text = "1. Identify trash type"
+horizontal_alignment = 1
+
+[node name="RecyclableBin" type="Sprite2D" parent="MechanicsPanel"]
+position = Vector2(255, 522)
+scale = Vector2(0.528646, 0.607422)
+texture = ExtResource("10_o7hg1")
+
+[node name="ResidualBin" type="Sprite2D" parent="MechanicsPanel"]
+position = Vector2(255.758, 716.68)
+scale = Vector2(0.53772, 0.62146)
+texture = ExtResource("11_8kgje")
+
+[node name="HazardousBin" type="Sprite2D" parent="MechanicsPanel"]
+position = Vector2(255.859, 911.313)
+scale = Vector2(0.547608, 0.621419)
+texture = ExtResource("12_qo1q6")
+
+[node name="Label4" type="Label" parent="MechanicsPanel"]
+layout_mode = 0
+offset_left = 326.0
+offset_top = 457.0
+offset_right = 1169.0
+offset_bottom = 634.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 41
+text = "RECYCLABLE: Materials like paper, plastic bottles, metal cans, and glass that can be reused or made into new products."
+autowrap_mode = 3
+
+[node name="Label5" type="Label" parent="MechanicsPanel"]
+layout_mode = 0
+offset_left = 324.0
+offset_top = 666.0
+offset_right = 1169.0
+offset_bottom = 843.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 41
+text = "RESIDUAL: Non-recyclable trash like candy wrappers, used tissues, or soiled packaging."
+autowrap_mode = 3
+
+[node name="Label6" type="Label" parent="MechanicsPanel"]
+layout_mode = 0
+offset_left = 326.0
+offset_top = 862.0
+offset_right = 1171.0
+offset_bottom = 1039.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 41
+text = "HAZARDOUS: Dangerous waste such as batteries, chemicals, and broken electronics."
+autowrap_mode = 3
+
+[node name="MechanicsNextBtn" type="TextureButton" parent="MechanicsPanel"]
+layout_mode = 0
+offset_left = 1061.0
+offset_top = 914.0
+offset_right = 1196.0
+offset_bottom = 1048.0
+texture_normal = ExtResource("2_q808y")
+texture_pressed = ExtResource("3_4ng5l")
+ignore_texture_size = true
+stretch_mode = 0
+flip_h = true
+
+[node name="MechanicsPanel2" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 636.0
+offset_top = -40.0
+offset_right = 1953.0
+offset_bottom = 1122.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_iohbd")
+
+[node name="Title" type="TextureRect" parent="MechanicsPanel2"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -316.0
+offset_top = -40.0
+offset_right = 304.0
+offset_bottom = 329.0
+grow_horizontal = 2
+texture = ExtResource("9_ktqp5")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="MechanicsPanel2"]
+layout_mode = 0
+offset_left = 177.0
+offset_top = 218.0
+offset_right = 1119.0
+offset_bottom = 260.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 41
+text = "2. Choose the correct bin."
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="MechanicsPanel2"]
+layout_mode = 0
+offset_left = 177.0
+offset_top = 272.0
+offset_right = 1144.0
+offset_bottom = 404.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 41
+text = "There are various types of waste, each requiring proper disposal, making it essential to select appropriate garbage bin."
+autowrap_mode = 3
+
+[node name="TextureRect" type="TextureRect" parent="MechanicsPanel2"]
+layout_mode = 0
+offset_left = 177.0
+offset_top = 441.0
+offset_right = 486.0
+offset_bottom = 803.0
+texture = ExtResource("13_fhqpf")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="MechanicsPanel2"]
+layout_mode = 0
+offset_left = 805.0
+offset_top = 448.0
+offset_right = 1144.0
+offset_bottom = 810.0
+texture = ExtResource("14_gwyw2")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="MechanicsPanel2"]
+layout_mode = 0
+offset_left = 460.0
+offset_top = 431.0
+offset_right = 799.0
+offset_bottom = 793.0
+texture = ExtResource("15_doms6")
+expand_mode = 1
+
+[node name="Label3" type="Label" parent="MechanicsPanel2"]
+layout_mode = 0
+offset_left = 248.0
+offset_top = 474.0
+offset_right = 487.0
+offset_bottom = 516.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.481789, 0.481789, 0.481789, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 30
+text = "I BELONG HERE!!"
+autowrap_mode = 3
+
+[node name="Label4" type="Label" parent="MechanicsPanel2"]
+layout_mode = 0
+offset_left = 899.0
+offset_top = 474.0
+offset_right = 1138.0
+offset_bottom = 516.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.481789, 0.481789, 0.481789, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 30
+text = "I BELONG HERE!!"
+autowrap_mode = 3
+
+[node name="Label5" type="Label" parent="MechanicsPanel2"]
+layout_mode = 0
+offset_left = 570.0
+offset_top = 474.0
+offset_right = 809.0
+offset_bottom = 516.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.481789, 0.481789, 0.481789, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 30
+text = "I BELONG HERE!!"
+autowrap_mode = 3
+
+[node name="Label6" type="Label" parent="MechanicsPanel2"]
+layout_mode = 0
+offset_left = 177.0
+offset_top = 841.0
+offset_right = 1119.0
+offset_bottom = 973.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 41
+text = "Check the control panel, to learn how to navigate when choosing garbage bin."
+autowrap_mode = 3
+
+[node name="MechanicsNextBtn2" type="TextureButton" parent="MechanicsPanel2"]
+layout_mode = 0
+offset_left = 1061.0
+offset_top = 914.0
+offset_right = 1196.0
+offset_bottom = 1048.0
+texture_normal = ExtResource("2_q808y")
+texture_pressed = ExtResource("3_4ng5l")
+ignore_texture_size = true
+stretch_mode = 0
+flip_h = true
+
+[node name="MechanicsPrevBtn" type="TextureButton" parent="MechanicsPanel2"]
+layout_mode = 0
+offset_left = 123.0
+offset_top = 914.0
+offset_right = 258.0
+offset_bottom = 1048.0
+texture_normal = ExtResource("2_q808y")
+texture_pressed = ExtResource("3_4ng5l")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="MechanicsPanel3" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 636.0
+offset_top = -40.0
+offset_right = 1953.0
+offset_bottom = 1122.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_iohbd")
+
+[node name="Title" type="TextureRect" parent="MechanicsPanel3"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -316.0
+offset_top = -40.0
+offset_right = 304.0
+offset_bottom = 329.0
+grow_horizontal = 2
+texture = ExtResource("9_ktqp5")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="MechanicsPanel3"]
+layout_mode = 0
+offset_left = 177.0
+offset_top = 218.0
+offset_right = 1119.0
+offset_bottom = 260.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 41
+text = "3. Throw with right power"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="MechanicsPanel3"]
+layout_mode = 0
+offset_left = 177.0
+offset_top = 272.0
+offset_right = 1144.0
+offset_bottom = 404.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 41
+text = "In this step, it is crucial to understand the mechanics of the power bar."
+autowrap_mode = 3
+
+[node name="TextureRect" type="TextureRect" parent="MechanicsPanel3"]
+layout_mode = 0
+offset_left = 177.0
+offset_top = 369.0
+offset_right = 1077.0
+offset_bottom = 690.0
+texture = ExtResource("16_ht84i")
+
+[node name="Label3" type="Label" parent="MechanicsPanel3"]
+layout_mode = 0
+offset_left = 177.0
+offset_top = 710.0
+offset_right = 1144.0
+offset_bottom = 932.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 41
+text = "Releasing the power indicator in the danger zone misses the bin and scores 0 points. Hitting the safe zone ensures the trash lands in the bin, scoring points and advancing the game."
+autowrap_mode = 3
+
+[node name="Label4" type="Label" parent="MechanicsPanel3"]
+layout_mode = 0
+offset_left = 877.0
+offset_top = 397.0
+offset_right = 1031.0
+offset_bottom = 439.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.481789, 0.481789, 0.481789, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 28
+text = "SAFE ZONE!!"
+autowrap_mode = 3
+
+[node name="Label5" type="Label" parent="MechanicsPanel3"]
+layout_mode = 0
+offset_left = 860.0
+offset_top = 547.0
+offset_right = 1055.0
+offset_bottom = 589.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.481789, 0.481789, 0.481789, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 28
+text = "DANGER ZONE!!"
+autowrap_mode = 3
+
+[node name="Label6" type="Label" parent="MechanicsPanel3"]
+layout_mode = 0
+offset_left = 177.0
+offset_top = 436.0
+offset_right = 418.0
+offset_bottom = 478.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.481789, 0.481789, 0.481789, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 28
+text = "Power Indicator"
+autowrap_mode = 3
+
+[node name="Label7" type="Label" parent="MechanicsPanel3"]
+layout_mode = 0
+offset_left = 277.0
+offset_top = 634.0
+offset_right = 437.0
+offset_bottom = 676.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.481789, 0.481789, 0.481789, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 28
+text = "Power Bar"
+autowrap_mode = 3
+
+[node name="MechanicsPrevBtn2" type="TextureButton" parent="MechanicsPanel3"]
+layout_mode = 0
+offset_left = 123.0
+offset_top = 914.0
+offset_right = 258.0
+offset_bottom = 1048.0
+texture_normal = ExtResource("2_q808y")
+texture_pressed = ExtResource("3_4ng5l")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ControlPanel" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 638.0
+offset_top = -40.0
+offset_right = 1955.0
+offset_bottom = 1122.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_iohbd")
+
+[node name="Title" type="TextureRect" parent="ControlPanel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -316.0
+offset_top = -40.0
+offset_right = 304.0
+offset_bottom = 329.0
+grow_horizontal = 2
+texture = ExtResource("9_ktqp5")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="ControlPanel"]
+layout_mode = 0
+offset_left = 177.0
+offset_top = 218.0
+offset_right = 1119.0
+offset_bottom = 260.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 41
+text = "Controls"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="ControlPanel"]
+layout_mode = 0
+offset_left = 177.0
+offset_top = 277.0
+offset_right = 1144.0
+offset_bottom = 409.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 41
+text = "Use left and right arrow keys to navigate the bins and select the correct one for your waste type."
+autowrap_mode = 3
+
+[node name="TextureRect" type="TextureRect" parent="ControlPanel"]
+layout_mode = 0
+offset_left = 484.0
+offset_top = 354.0
+offset_right = 823.0
+offset_bottom = 497.0
+texture = ExtResource("17_ppjxb")
+expand_mode = 1
+
+[node name="Label7" type="Label" parent="ControlPanel"]
+layout_mode = 0
+offset_left = 244.0
+offset_top = 445.0
+offset_right = 485.0
+offset_bottom = 487.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.481789, 0.481789, 0.481789, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 28
+text = "Press to go left"
+autowrap_mode = 3
+
+[node name="Label8" type="Label" parent="ControlPanel"]
+layout_mode = 0
+offset_left = 823.0
+offset_top = 445.0
+offset_right = 1077.0
+offset_bottom = 487.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.481789, 0.481789, 0.481789, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 28
+text = "Press to go right"
+autowrap_mode = 3
+
+[node name="Label3" type="Label" parent="ControlPanel"]
+layout_mode = 0
+offset_left = 175.0
+offset_top = 504.0
+offset_right = 1142.0
+offset_bottom = 636.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 41
+text = "There will be an arrow indicator below the trash bin to show what garbage bin is currently selected."
+autowrap_mode = 3
+
+[node name="TextureRect2" type="TextureRect" parent="ControlPanel"]
+layout_mode = 0
+offset_left = 341.0
+offset_top = 804.0
+offset_right = 935.0
+offset_bottom = 993.0
+texture = ExtResource("18_gs3rl")
+
+[node name="Label9" type="Label" parent="ControlPanel"]
+layout_mode = 0
+offset_left = 416.0
+offset_top = 821.0
+offset_right = 557.0
+offset_bottom = 863.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.481789, 0.481789, 0.481789, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 28
+text = "PRESS ME!!"
+autowrap_mode = 3
+
+[node name="Label10" type="Label" parent="ControlPanel"]
+layout_mode = 0
+offset_left = 716.0
+offset_top = 828.0
+offset_right = 957.0
+offset_bottom = 870.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.481789, 0.481789, 0.481789, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 26
+text = "TO ACTIVATE ME!!"
+autowrap_mode = 3
+
+[node name="Label4" type="Label" parent="ControlPanel"]
+layout_mode = 0
+offset_left = 175.0
+offset_top = 652.0
+offset_right = 1144.0
+offset_bottom = 784.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 41
+text = "After selecting a bin, press and release the spacebar within the green zone to land the trash correctly."
+autowrap_mode = 3
+
+[node name="PointsPanel" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 640.0
+offset_top = -40.0
+offset_right = 1957.0
+offset_bottom = 1122.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_iohbd")
+
+[node name="Title" type="TextureRect" parent="PointsPanel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -316.0
+offset_top = -40.0
+offset_right = 304.0
+offset_bottom = 329.0
+grow_horizontal = 2
+texture = ExtResource("9_ktqp5")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="PointsPanel"]
+layout_mode = 0
+offset_left = 177.0
+offset_top = 218.0
+offset_right = 1119.0
+offset_bottom = 260.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 41
+text = "Point System"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="PointsPanel"]
+layout_mode = 0
+offset_left = 177.0
+offset_top = 306.0
+offset_right = 1144.0
+offset_bottom = 354.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 41
+text = "Situation              Condition                   Points"
+autowrap_mode = 3
+
+[node name="Label3" type="Label" parent="PointsPanel"]
+layout_mode = 0
+offset_left = 177.0
+offset_top = 385.0
+offset_right = 414.0
+offset_bottom = 989.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 41
+text = "Perfect
+
+
+
+
+Wrong Bin, Good Timing
+
+
+Missed Safe Zone"
+autowrap_mode = 3
+
+[node name="Label4" type="Label" parent="PointsPanel"]
+layout_mode = 0
+offset_left = 505.0
+offset_top = 385.0
+offset_right = 897.0
+offset_bottom = 1057.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 41
+text = "Correct Bin + Power Bar in Safe Zone
+
+
+Incorrect Bin + Power Bar in Safe Zone
+
+
+Correct or Incorrect Bin + Power Bar oustide Safe Zone"
+autowrap_mode = 3
+
+[node name="Label5" type="Label" parent="PointsPanel"]
+layout_mode = 0
+offset_left = 997.0
+offset_top = 385.0
+offset_right = 1182.0
+offset_bottom = 989.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 41
+text = "+10
+
+
+
+
+-5
+
+
+
+
+0"
+autowrap_mode = 3
+
+[node name="TrashPanel" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 640.0
+offset_top = -40.0
+offset_right = 1957.0
+offset_bottom = 1122.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_iohbd")
+
+[node name="Title" type="TextureRect" parent="TrashPanel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -316.0
+offset_top = -40.0
+offset_right = 304.0
+offset_bottom = 329.0
+grow_horizontal = 2
+texture = ExtResource("9_ktqp5")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="TrashPanel"]
+layout_mode = 0
+offset_left = 177.0
+offset_top = 218.0
+offset_right = 1119.0
+offset_bottom = 260.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 41
+text = "Apppropriate Garbage Bins for Each Trash:"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="TrashPanel"]
+layout_mode = 0
+offset_left = 273.0
+offset_top = 263.0
+offset_right = 1031.0
+offset_bottom = 592.0
+texture = ExtResource("19_vi005")
+
+[node name="TextureRect2" type="TextureRect" parent="TrashPanel"]
+layout_mode = 0
+offset_left = 273.0
+offset_top = 641.0
+offset_right = 1031.0
+offset_bottom = 986.0
+texture = ExtResource("20_1gisk")
+
+[node name="Label7" type="Label" parent="TrashPanel"]
+layout_mode = 0
+offset_left = 265.0
+offset_top = 379.0
+offset_right = 422.0
+offset_bottom = 421.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.481789, 0.481789, 0.481789, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 20
+text = "Plastic Bottle"
+autowrap_mode = 3
+
+[node name="Label8" type="Label" parent="TrashPanel"]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 379.0
+offset_right = 487.0
+offset_bottom = 421.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.481789, 0.481789, 0.481789, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 20
+text = "Box"
+autowrap_mode = 3
+
+[node name="Label9" type="Label" parent="TrashPanel"]
+layout_mode = 0
+offset_left = 544.0
+offset_top = 378.0
+offset_right = 643.0
+offset_bottom = 421.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.481789, 0.481789, 0.481789, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 20
+text = "Plastic Cup"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Label10" type="Label" parent="TrashPanel"]
+layout_mode = 0
+offset_left = 670.0
+offset_top = 379.0
+offset_right = 734.0
+offset_bottom = 421.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.481789, 0.481789, 0.481789, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 20
+text = "Glass"
+autowrap_mode = 3
+
+[node name="Label11" type="Label" parent="TrashPanel"]
+layout_mode = 0
+offset_left = 289.0
+offset_top = 545.0
+offset_right = 414.0
+offset_bottom = 587.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.481789, 0.481789, 0.481789, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 20
+text = "Scrap Metal"
+autowrap_mode = 3
+
+[node name="Label12" type="Label" parent="TrashPanel"]
+layout_mode = 0
+offset_left = 495.0
+offset_top = 552.0
+offset_right = 599.0
+offset_bottom = 594.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.481789, 0.481789, 0.481789, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 20
+text = "Tin Cans"
+autowrap_mode = 3
+
+[node name="Label13" type="Label" parent="TrashPanel"]
+layout_mode = 0
+offset_left = 670.0
+offset_top = 543.0
+offset_right = 756.0
+offset_bottom = 585.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.481789, 0.481789, 0.481789, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 20
+text = "Papers"
+autowrap_mode = 3
+
+[node name="Label14" type="Label" parent="TrashPanel"]
+layout_mode = 0
+offset_left = 883.0
+offset_top = 535.0
+offset_right = 1032.0
+offset_bottom = 578.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.481789, 0.481789, 0.481789, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 26
+text = "RECYCLABLE"
+autowrap_mode = 3
+
+[node name="Label15" type="Label" parent="TrashPanel"]
+layout_mode = 0
+offset_left = 279.0
+offset_top = 761.0
+offset_right = 423.0
+offset_bottom = 803.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.481789, 0.481789, 0.481789, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 20
+text = "Candy Wrapper"
+autowrap_mode = 3
+
+[node name="Label16" type="Label" parent="TrashPanel"]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 713.0
+offset_right = 573.0
+offset_bottom = 755.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.481789, 0.481789, 0.481789, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 20
+text = "Styrofoam"
+autowrap_mode = 3
+
+[node name="Label17" type="Label" parent="TrashPanel"]
+layout_mode = 0
+offset_left = 608.0
+offset_top = 721.0
+offset_right = 697.0
+offset_bottom = 763.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.481789, 0.481789, 0.481789, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 20
+text = "Ceramic"
+autowrap_mode = 3
+
+[node name="Label18" type="Label" parent="TrashPanel"]
+layout_mode = 0
+offset_left = 282.0
+offset_top = 907.0
+offset_right = 377.0
+offset_bottom = 950.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.481789, 0.481789, 0.481789, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 20
+text = "Sanitary Napkin"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Label19" type="Label" parent="TrashPanel"]
+layout_mode = 0
+offset_left = 465.0
+offset_top = 860.0
+offset_right = 561.0
+offset_bottom = 902.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.481789, 0.481789, 0.481789, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 20
+text = "Diaper"
+autowrap_mode = 3
+
+[node name="Label20" type="Label" parent="TrashPanel"]
+layout_mode = 0
+offset_left = 634.0
+offset_top = 861.0
+offset_right = 678.0
+offset_bottom = 893.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.481789, 0.481789, 0.481789, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 20
+text = "Rug"
+autowrap_mode = 3
+
+[node name="Label21" type="Label" parent="TrashPanel"]
+layout_mode = 0
+offset_left = 505.0
+offset_top = 986.0
+offset_right = 658.0
+offset_bottom = 1029.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.481789, 0.481789, 0.481789, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 20
+text = "Leftover Foods"
+autowrap_mode = 3
+
+[node name="Label22" type="Label" parent="TrashPanel"]
+layout_mode = 0
+offset_left = 904.0
+offset_top = 854.0
+offset_right = 1048.0
+offset_bottom = 911.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.481789, 0.481789, 0.481789, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 26
+text = "RESIDUAL"
+autowrap_mode = 3
+
+[node name="TextureRect3" type="TextureRect" parent="TrashPanel"]
+layout_mode = 0
+offset_left = 244.0
+offset_top = 578.0
+offset_right = 1065.0
+offset_bottom = 618.0
+texture = ExtResource("21_pfka1")
+
+[node name="TrashNextBtn" type="TextureButton" parent="TrashPanel"]
+layout_mode = 0
+offset_left = 1061.0
+offset_top = 914.0
+offset_right = 1196.0
+offset_bottom = 1048.0
+texture_normal = ExtResource("2_q808y")
+texture_pressed = ExtResource("3_4ng5l")
+ignore_texture_size = true
+stretch_mode = 0
+flip_h = true
+
+[node name="TrashPanel2" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 640.0
+offset_top = -40.0
+offset_right = 1957.0
+offset_bottom = 1122.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_iohbd")
+
+[node name="Title" type="TextureRect" parent="TrashPanel2"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -316.0
+offset_top = -40.0
+offset_right = 304.0
+offset_bottom = 329.0
+grow_horizontal = 2
+texture = ExtResource("9_ktqp5")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="TrashPanel2"]
+layout_mode = 0
+offset_left = 177.0
+offset_top = 218.0
+offset_right = 1119.0
+offset_bottom = 260.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 41
+text = "Apppropriate Garbage Bins for Each Trash:"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="TrashPanel2"]
+layout_mode = 0
+offset_left = 273.0
+offset_top = 329.0
+offset_right = 1034.0
+offset_bottom = 658.0
+texture = ExtResource("22_jhhj7")
+
+[node name="Label18" type="Label" parent="TrashPanel2"]
+layout_mode = 0
+offset_left = 254.0
+offset_top = 439.0
+offset_right = 366.0
+offset_bottom = 482.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.481789, 0.481789, 0.481789, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 20
+text = "Batteries"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Label19" type="Label" parent="TrashPanel2"]
+layout_mode = 0
+offset_left = 398.0
+offset_top = 436.0
+offset_right = 509.0
+offset_bottom = 502.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.481789, 0.481789, 0.481789, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 20
+text = "Cleaning Supplies"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Label20" type="Label" parent="TrashPanel2"]
+layout_mode = 0
+offset_left = 554.0
+offset_top = 449.0
+offset_right = 666.0
+offset_bottom = 492.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.481789, 0.481789, 0.481789, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 20
+text = "Spray Cannister"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Label21" type="Label" parent="TrashPanel2"]
+layout_mode = 0
+offset_left = 273.0
+offset_top = 641.0
+offset_right = 385.0
+offset_bottom = 684.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.481789, 0.481789, 0.481789, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 20
+text = "Thinner"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Label22" type="Label" parent="TrashPanel2"]
+layout_mode = 0
+offset_left = 463.0
+offset_top = 645.0
+offset_right = 524.0
+offset_bottom = 688.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.481789, 0.481789, 0.481789, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 20
+text = "Paint"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Label23" type="Label" parent="TrashPanel2"]
+layout_mode = 0
+offset_left = 613.0
+offset_top = 659.0
+offset_right = 725.0
+offset_bottom = 683.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.481789, 0.481789, 0.481789, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 20
+text = "Lubricant"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Label14" type="Label" parent="TrashPanel2"]
+layout_mode = 0
+offset_left = 907.0
+offset_top = 578.0
+offset_right = 1056.0
+offset_bottom = 621.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.481789, 0.481789, 0.481789, 1)
+theme_override_fonts/font = ExtResource("6_1xism")
+theme_override_font_sizes/font_size = 26
+text = "HAZARDOUS"
+autowrap_mode = 3
+
+[node name="TrashPrevBtn" type="TextureButton" parent="TrashPanel2"]
+layout_mode = 0
+offset_left = 123.0
+offset_top = 914.0
+offset_right = 258.0
+offset_bottom = 1048.0
+texture_normal = ExtResource("2_q808y")
+texture_pressed = ExtResource("3_4ng5l")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ClickSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("23_4agcg")
+
+[connection signal="pressed" from="BackBtn" to="." method="_on_back_btn_pressed"]
+[connection signal="pressed" from="MechanicsBtn" to="." method="_on_mechanics_btn_pressed"]
+[connection signal="pressed" from="ControlBtn" to="." method="_on_control_btn_pressed"]
+[connection signal="pressed" from="PointsBtn" to="." method="_on_points_btn_pressed"]
+[connection signal="pressed" from="TrashBtn" to="." method="_on_trash_btn_pressed"]
+[connection signal="pressed" from="MechanicsPanel/MechanicsNextBtn" to="." method="_on_mechanics_next_btn_pressed"]
+[connection signal="pressed" from="MechanicsPanel2/MechanicsNextBtn2" to="." method="_on_mechanics_next_btn_2_pressed"]
+[connection signal="pressed" from="MechanicsPanel2/MechanicsPrevBtn" to="." method="_on_mechanics_prev_btn_pressed"]
+[connection signal="pressed" from="MechanicsPanel3/MechanicsPrevBtn2" to="." method="_on_mechanics_prev_btn_2_pressed"]
+[connection signal="pressed" from="TrashPanel/TrashNextBtn" to="." method="_on_trash_next_btn_pressed"]
+[connection signal="pressed" from="TrashPanel2/TrashPrevBtn" to="." method="_on_trash_prev_btn_pressed"]
